@@ -1,0 +1,322 @@
+:root {
+  --fuentePrincipal: 'Poppins', sans-serif;
+  --blanco: #fff;
+  --negro: #000;
+  --primario: #ffc107;
+  --grisClaro: #dfe9f3;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 2.5rem;
+  font-family: var(--fuentePrincipal);
+  color: var(--blanco);
+}
+a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contenedor {
+  max-width: 120rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  font-family: var(--fuentePrincipal);
+}
+h1 { font-size: 4rem; }
+h2 { font-size: 3.2rem; }
+h3 { font-size: 2.4rem; }
+
+/** Utilidades **/
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.centrar-texto {
+  text-align: center;
+}
+
+.video {
+  position: relative;
+  max-height: 55rem;
+  overflow: hidden;
+}
+
+.video video {
+  display: block;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#31eaea+7,68e8e8+9,ffffff+100&0.39+44,0.5+100 */
+background: -moz-linear-gradient(top,  rgba(49,234,234,0.39) 7%, rgba(104,232,232,0.39) 9%, rgba(162,241,241,0.39) 44%, rgba(255,255,255,0.5) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(49,234,234,0.39) 7%,rgba(104,232,232,0.39) 9%,rgba(162,241,241,0.39) 44%,rgba(255,255,255,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(49,234,234,0.39) 7%,rgba(104,232,232,0.39) 9%,rgba(162,241,241,0.39) 44%,rgba(255,255,255,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6331eaea', endColorstr='#80ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.contenido-video {
+  display: flex;
+  justify-content: center; /** Horizontal **/
+  align-items: center; /** Vertical **/
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.contenido-video h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--blanco);
+  font-size: 8rem;
+}
+
+.contenido-video h1 a:hover {
+  color: var(--negro);
+}
+
+.contenido-video h1 span {
+  font-size: 3rem;
+}
+
+.navegacion {
+  background-color: var(--primario);
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .navegacion {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.navegacion__enlace {
+  display: block;
+  text-align: center;
+  font-family: var(--fuentePrincipal);
+  font-size: 3rem;
+}
+
+.navegacion__enlace:hover {
+  color: var(--negro);
+}
+
+.boton {
+  display: block;
+  font-family: var(--fuentePrincipal);
+  color: var(--negro);
+  text-align: center;
+  padding: 1rem 1rem;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  border: none;
+  background-color: var(--primario);
+  border-radius: 1rem;
+  margin: 3.5rem 10rem;
+}
+
+.formulario {
+  width: 100%;
+  height: 90%;
+  background-color: var(--grisClaro);
+  border-radius: 2rem 2rem 0 0;
+  padding: 0;
+  margin: 3rem 0 0;
+}
+
+.formulario h2 {
+  background-color: var(--negro);
+  text-align: center;
+  color: var(--blanco);
+  padding: 1rem 0;
+  border-radius: 2rem 2rem 0 0;
+  margin: 0;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  margin: 2rem 2rem;
+}
+
+.campo label {
+  flex: 0 0 10rem;
+  color: var(--negro);
+  font-size: 2.7rem;
+  font-family: var(--fuentePrincipal);
+  font-weight: 700;
+}
+
+.campo input{
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 2rem;
+}
+
+.entrada-cuadro {
+  max-width: 100%;
+  margin-bottom: 3rem;
+}
+.entrada-cuadro--linea {
+  border-bottom: 1px solid var(--grisClaro);
+}
+
+.entrada-cuadro h2 {
+  color: var(--primario);
+  background-color: var(--negro);
+  padding: 0.7rem;
+}
+
+.entrada-cuadro a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--negro);
+  color: white;
+  padding: 1px 2px;
+  text-decoration: none;
+  font-family: var(--fuentePrincipal);
+  font-size: 2.5rem;
+}
+
+.entrada-cuadro a:hover {
+  color: var(--primario);
+}
+
+.entrada-cuadro--cuadro2 {
+  background-image: url(../img/tarjeta.png);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 3rem;
+  border-radius: 2rem 0 0 0 ;
+}
+
+.entrada-cuadro--cuadro2 h3 {
+  background-color: var(--negro);
+  color: var(--blanco);
+  border-radius: 2rem 0 0 0 ;
+  padding: 0.7rem;
+}
+.entrada-cuadro--cuadro2 p{
+  margin-top: 20rem;
+  color: var(--negro);
+}
+.entrada-cuadro--cuadro3 {
+  background-image: url(../img/libros.png);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 3rem;
+  border-radius: 0 2rem 0 0;
+}
+
+.entrada-cuadro--cuadro3 h3 {
+  background-color: var(--negro);
+  color: var(--blanco);
+  border-radius: 0 2rem 0 0;
+  padding: 2rem;
+}
+
+.entrada-cuadro--cuadro3 p {
+  margin-top: 20rem;
+  color: var(--negro);
+}
+
+.entrada-cuadro--cuadro4 {
+  background-image: url(../img/llaves.png);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 3rem;
+  border-radius: 0 0 0 2rem ;
+}
+
+.entrada-cuadro--cuadro4 h3{
+  color: var(--blanco);
+  background-color: var(--negro);
+  padding: 2rem;
+}
+
+.entrada-cuadro--cuadro4 p {
+  margin-top: 20rem;
+  color: var(--negro);
+  text-align: center;
+}
+
+.entrada-cuadro--cuadro5 {
+  background-image: url(../img/casa.png);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 0 0 2rem 0;
+  margin-bottom: 3rem;
+}
+
+.entrada-cuadro--cuadro5 h3 {
+  color: var(--blanco);
+  background-color: var(--negro);
+  padding: 2rem;
+}
+
+.entrada-cuadro--cuadro5 p{
+  color: var(--negro);
+  margin-top: 20rem;
+}
+
+@media (min-width: 768px) {
+.tres-columnas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+}
+
+.footer {
+  background-color: var(--negro);
+  padding: 1rem 0;
+  font-family: var(--fuentePrincipal);
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.footer a:hover {
+  color: var(--primario);
+}
