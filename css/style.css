@@ -301,13 +301,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6331eaea', e
 }
 
 @media (min-width: 768px) {
-.tres-columnas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  .tres-columnas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
-}
-
 .footer {
   background-color: var(--negro);
   padding: 1rem 0;
