@@ -300,7 +300,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6331eaea', e
   margin-top: 20rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .tres-columnas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
